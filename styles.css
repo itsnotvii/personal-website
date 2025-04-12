@@ -44,7 +44,7 @@ header {
     gap: 1rem;
 }
 
-.logo-image {
+.logo {
     width: 40px;
     height: auto;
 }
@@ -72,6 +72,7 @@ nav a:hover {
     opacity: 1;
 }
 
+
 nav ul li:last-child a {
     background-color: #fff;
     color: black;
@@ -79,11 +80,14 @@ nav ul li:last-child a {
     border: 2px solid black;
     border-radius: 5px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 nav ul li:last-child a:hover {
-    background-color: black;
-    color: #fff;
+    background-color: #fff;
+    color: black;
+    transform: scale(1.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -96,6 +100,13 @@ section {
 @media (max-width: 768px) {
     section {
         scroll-margin-top: 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }
 
@@ -117,10 +128,18 @@ section h2 {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: -1px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+.about-text-wrapper {
+    font-size: 2.2rem;
 }
 
 .hero p {
@@ -383,4 +402,5 @@ footer {
 
 
 
+ 
  
